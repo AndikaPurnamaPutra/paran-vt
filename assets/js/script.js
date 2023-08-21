@@ -63,7 +63,7 @@ $(document).ready(function () {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     centerMode: true,
                 },
             },
@@ -78,7 +78,7 @@ $(document).ready(function () {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    centerMode: true,
+                    centerMode: false,
                 },
             },
         ],
