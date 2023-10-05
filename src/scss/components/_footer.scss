@@ -1,0 +1,177 @@
+.footer {
+    .container {
+        &-footer {
+            padding-block: 80px;
+            gap: 130px;
+            @include responsive(xl) {
+                gap: 80px;
+            }
+            @include responsive(md) {
+                padding-block: 40px;
+            }
+            @include responsive(sm) {
+                gap: 40px;
+            }
+            .head-content {
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 72px;
+                @include responsive(sm) {
+                    width: 100%;
+                    gap: 40px;
+                }
+                .subtext-text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 24px;
+                    width: 100%;
+                    
+                    &-logo {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 19px;
+
+                        color: $white;
+                        text-align: center;
+                        font-family: $font-display;
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 160%; /* 38.4px */
+                        text-transform: uppercase;
+
+                        img {
+                            max-width: 48px;
+                        }
+                    }
+                    &-desc {
+                        color: $subText2;
+                        font-family: $font-display;
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 160%; /* 28.8px */
+                        letter-spacing: 0.09px;
+                        max-width: 320px;
+                    }
+                    .wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 8px;
+                    }
+                    &-subtitle {
+                        color: $white;
+                        font-family: $font-display;
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 150%; /* 27px */
+                        letter-spacing: 0.09px;
+                    }
+                    &-span {
+                        color: $subText2;
+                        font-family: $font-display;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 140%; /* 19.6px */
+                        letter-spacing: 0.07px;
+                    }
+                    form {
+                        display: flex;
+                        gap: 10px;
+                        width: 100%;
+                        input[type="email"] {
+                            font-family: $font-display;
+                            padding: 12px 4px 12px 24px;
+                            font-size: 16px;
+                            line-height: 160%;
+                            font-weight: 400;
+                            color: $light-black;
+                            border-radius: 8px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .body-content {
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @include responsive(md) {
+                    width: 100%;
+                    gap: 80px;
+                }
+                .subtext-text {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    @include responsive(sm) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 20px;
+                    }
+                    .company,
+                    .exchange,
+                    .community {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 23px;
+                        &-label {
+                            color: $white;
+                            font-family: $font-display;
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 150%; /* 27px */
+                            letter-spacing: 0.09px;
+                        }
+                        &-list {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 16px;
+                            .nav-link {
+                                color: $subText;
+                                font-family: $font-display;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 160%; /* 25.6px */
+                            }
+                        }
+                    }
+                    .social-media {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        &-subtitle {
+                            color: $white;
+                            font-family: $font-display;
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 150%; /* 27px */
+                            letter-spacing: 0.09px;
+                        }
+                        &-wrapper {
+                            display: flex;
+                            gap: 12px;
+                            a {
+                                padding: 8px;
+                                display: inline-flex;
+                            }
+                        }
+                    }
+                    .copyright {
+                        color: $subText2;
+                        font-family: $font-display;
+                        text-align: right;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 140%; /* 19.6px */
+                        letter-spacing: 0.07px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+.section-header {
+    .container {
+        &-header {
+            padding-top: 190px;
+            padding-bottom: 80px;
+            position: relative;
+            @include responsive(xl) {
+                padding-top: 160px;
+            }
+            @include responsive(md) {
+                padding-top: 120px;
+                padding-bottom: 40px;
+            }
+            .header-gradient {
+                position: absolute;
+                top: -49px;
+                left: -55px;
+                max-width: 805px;
+                z-index: -1;
+            }
+            .header {
+                position: relative;
+                display: flex;
+                @include responsive(md) {
+                    justify-content: center;
+                }
+                .head-content {
+                    max-width: 670px;
+                    @include responsive(md) {
+                        max-width: 100%;
+                        margin-bottom: 80px;
+                    }
+                    .subtext {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 80px;
+                        @include responsive(xl) {
+                            gap: 40px;
+                        }
+                        &-text {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            gap: 32px;
+                            @include responsive(xl) {
+                                gap: 24px;
+                            }
+                            @include responsive(md) {
+                                align-items:  center;
+                                text-align: center;
+                            }
+                            &-span {
+                                color: $white;
+                                font-family: $font-display;
+                                font-size: 12px;
+                                font-weight: 400;
+                                line-height: 160%;
+                                text-transform: uppercase;
+                                padding: 6px 12px;
+                                border-radius: 8px;
+                                background: rgba(255, 255, 255, 0.15);
+                            }
+                            &-display {
+                                color: $white;
+                                font-family: $font-display;
+                                font-size: 70px;
+                                font-weight: 600;
+                                line-height: 120%;
+                                @include responsive(xl) {
+                                    font-size: 52px;
+                                }
+                                @include responsive(md) {
+                                    max-width: 507px;
+                                }
+                                @include responsive(sm) {
+                                    font-size: 32px;
+                                }
+                            }
+                            &-desc {
+                                color: $subText2;
+                                font-family: $font-display;
+                                font-size: 18px;
+                                font-weight: 400;
+                                line-height: 160%; /* 28.8px */
+                                letter-spacing: 0.09px;
+                                max-width: 530px;
+                                @include responsive(xl) {
+                                    max-width: 464px;
+                                }
+                            }
+                        }
+                    }
+                    .wrapper-btn {
+                        display: flex;
+                        gap: 38px;
+                        @include responsive(md) {
+                            justify-content: center;
+                        }
+                        @include responsive(sm) {
+                            flex-direction: column;
+                            gap: 24px;
+                        }
+                    }
+                }
+                .body-content {
+                    margin-left: -87px;
+                    @include responsive(xl) {
+                        margin-left: -130px;
+                    }
+                    @include responsive(md) {
+                        display: none;
+                    }
+                    .subtext-image {
+                        img {
+                            max-width: 587px;
+                        }
+                    }
+                }
+                &::after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 2px;
+                    content: " ";
+                    border-radius: 2px;
+                    background: linear-gradient(
+                        270deg,
+                        rgba(255, 255, 255, 0) 0%,
+                        rgba(255, 255, 255, 0.8) 51.56%,
+                        rgba(255, 255, 255, 0) 100%
+                    );
+                }
+            }
+        }
+    }
+}

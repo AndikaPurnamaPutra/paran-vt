@@ -1,0 +1,97 @@
+// @font-face {
+//     font-family: 'icomoon';
+//     src:  url('../assets/icomoon.eot?5vv5sz');
+//     src:  url('assets/icomoon.eot?5vv5sz#iefix') format('embedded-opentype'),
+//       url('../assets/icomoon.ttf?5vv5sz') format('truetype'),
+//       url('../assets/icomoon.woff?5vv5sz') format('woff'),
+//       url('../utilities/assets/icomoon.svg?5vv5sz#icomoon') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: block;
+//   }
+
+// @font-face {
+//     font-family: "ThunderMed";
+//     src: url("/assets/fonts/Thunder-MediumLC.woff") format("woff"),
+//         url("/assets/fonts/Thunder-MediumLC.woff2") format("woff2"),
+//         url("/assets/fonts/Thunder-MediumLC.ttf") format("truetype");
+//     font-style: normal;
+//     font-weight: normal;
+//     text-rendering: optimizeLegibility;
+// }
+
+// Font Family
+
+// $fontFamilyInter: "Inter", sans-serif;
+// $fontFamilyGilroy: "Gilroy", sans-serif;
+// $fontFamilies: (
+//     font-sans:
+//         'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+//     font-serif: 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+//     font-mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+//     font-inter: '"Inter", sans-serif',
+//     font-gilroy: '"Gilroy", sans-serif',
+// ) !default;
+
+$font-display: 'SF Pro Display', sans-serif;
+$font-body: 'Poppins', sans-serif;
+
+// Font Size
+$base: 16px;
+$lh-heading: 120%;
+$lh-desc: 160%;
+$h1: 76px; 
+$h2: 52px;
+$h4: 26px; 
+$h5: 24px;
+$p: 18px; 
+$p-md: 16px;
+$p-sm: 14px;
+
+// Heading
+h1 {
+    font-family: $font-display;
+    font-size: $h1;
+    font-weight: 400;
+    line-height: $lh-heading;
+}
+h2 {
+    font-family: $font-display;
+    font-size: $h2;
+    font-weight: 400;
+    line-height: $lh-heading;
+}
+// h3 {
+//     font-family: $font-body;
+//     font-size: $h3;
+//     font-weight: 400;
+//     line-height: $lh-heading;
+// }
+h4 {
+    font-family: $font-display;
+    font-size: $h4;
+    font-weight: 400;
+    line-height: $lh-heading;
+}
+h5 {
+    font-family: $font-display;
+    font-size: $h5;
+    font-weight: 400;
+    line-height: $lh-heading;
+}
+
+p {
+    font-family: $font-display;
+    font-size: $p;
+    line-height: $lh-desc;
+    font-weight: 400;
+
+    // @include responsive(md) {
+    //     font-size: 1.125em;
+    // }
+}
+
+body {
+    font-family: $font-display;
+    font-size: $base;
+}

@@ -1,0 +1,140 @@
+.section-community {
+    .container {
+        &-community {
+            flex-direction: column;
+            padding-block: 80px;
+            gap: 80px;
+            @include responsive(md) {
+                padding-block: 40px;
+            }
+            @include responsive(sm) {
+                gap: 40px;
+            }
+            .head-content {
+                .subtext {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @include responsive(md) {
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 32px;
+                    }
+                    &-text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 32px;
+                        width: 40%;
+                        @include responsive(md) {
+                            width: 100%;
+                        }
+                        &-span {
+                            color: $white;
+                            font-family: $font-display;
+                            font-size: 12px;
+                            font-weight: 400;
+                            line-height: 160%;
+                            text-transform: uppercase;
+                            padding: 6px 12px;
+                            border-radius: 8px;
+                            background: rgba(255, 255, 255, 0.15);
+                        }
+                        &-display {
+                            color: $white;
+                            font-family: $font-display;
+                            font-size: 52px;
+                            font-weight: 600;
+                            line-height: 120%; /* 62.4px */
+                            @include responsive(xl) {
+                                font-size: 42px;
+                            }
+                            @include responsive(sm) {
+                                font-size: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+            .body-content {
+                display: flex;
+                align-items: center;
+                gap: 100px;
+                @include responsive(xl) {
+                    gap: 50px;
+                }
+                @include responsive(md) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .subtext {
+                    width: 100%;
+                    &-item {
+                        width: 470px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 32px;
+                        border-radius: 30px;
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+                        background-color: rgba(255, 255, 255, 0.1);
+                        padding: 48px 56px;
+                        @include responsive(sm) {
+                            width: 100%;
+                            padding: 20px 26px;
+                        }
+                        .item {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            &-text {
+                                display: inline-flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                gap: 8px;
+                                &-subtitle {
+                                    color: $white;
+                                    font-family: $font-display;
+                                    font-size: 26px;
+                                    font-weight: 600;
+                                    line-height: 140%; /* 36.4px */
+                                    letter-spacing: 0.13px;
+                                    @include responsive(sm) {
+                                        font-size: 20px;
+                                    }
+                                }
+                                &-span {
+                                    color: $subText2;
+                                    font-family: $font-display;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    line-height: 140%; /* 19.6px */
+                                    letter-spacing: 0.07px;
+                                }
+                            }
+                        }
+                        .line-border {
+                            content: "";
+                            width: 100%;
+                            height: 1px;
+                            border-radius: 2px;
+                            background: linear-gradient(
+                                270deg,
+                                rgba(255, 255, 255, 0) 0%,
+                                rgba(255, 255, 255, 0.4) 51.56%,
+                                rgba(255, 255, 255, 0) 100%
+                            );
+                        }
+                    }
+                    &-image {
+                        margin-right: -285px;
+                        max-width: 1020px;
+                        @include responsive(md) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

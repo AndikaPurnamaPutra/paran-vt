@@ -1,0 +1,26 @@
+$primary: #E42DDD;
+// $secondary: #152632;
+
+$white: #ffffff;
+$gray: #353548;
+$black: #0A0A15;
+$light-black: #151515;
+$dark-white: rgba(255, 255, 255, 0.10);
+// $light-white: rgba(255, 255, 255, 0.70);
+// $light-black: rgba(21, 38, 50, 0.60);
+
+$display: #ffffff;
+$subText: rgba(255, 255, 255, 0.70);
+$subText2: rgba(255, 255, 255, 0.60);
+
+.text-primary {
+    color: $primary;
+}
+.text-secondary {
+    color: rgba(255, 255, 255, 0.50);
+}
+
+body {
+    color: $white;
+    background-color: $black;
+}

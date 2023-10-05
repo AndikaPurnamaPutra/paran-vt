@@ -1,0 +1,66 @@
+.section-mobile {
+    .container {
+        &-mobile {
+            padding-block: 80px;
+            justify-content: space-between;
+            @include responsive(xl) {
+                gap: 40px;
+            }
+            @include responsive(md) {
+                padding-block: 40px;
+            }
+            .head-content {
+                .subtext {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 80px;
+                    @include responsive(md) {
+                        gap: 40px;
+                    }
+                    &-text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+                        max-width: 490px;
+                        &-display {
+                            color: $white;
+                            font-family: $font-display;
+                            font-size: 52px;
+                            font-weight: 600;
+                            line-height: 120%; /* 62.4px */
+                            @include responsive(xl) {
+                                font-size: 42px;
+                            }
+                            @include responsive(sm) {
+                                font-size: 32px;
+                            }
+                            
+                        }
+                        &-desc {
+                            color: $subText2;
+                            font-family: $font-display;
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 160%; /* 28.8px */
+                            letter-spacing: 0.09px;
+                            max-width: 570px;
+                        }
+                    }
+                    .wrapper-btn {
+                        display: flex;
+                        gap: 38px;
+                        @include responsive(sm) {
+                            flex-direction: column;
+                            gap: 24px;
+                        }
+                    }
+                }
+            }
+            .body-content {
+                .subtext-image {
+                    max-width: 570px;
+                }
+            }
+        }
+    }
+}

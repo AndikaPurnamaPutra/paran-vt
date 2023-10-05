@@ -1,0 +1,43 @@
+.section-partner {
+    padding-block: 58px;
+    @include responsive(md) {
+        padding-block: 30px;
+    }
+    .container-fluid {
+        &-partner {
+            max-width: 1440px;
+            width: 100%;
+            .partner {
+                &-slider {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    overflow-x: scroll;
+                    gap: 30px;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    @include responsive(md) {
+                        gap: 15px;
+                    }
+                    @include responsive(sm) {
+                        justify-content: flex-start;
+                    }
+                    .slide {
+                        width: 175px;
+                        @include responsive(md) {
+                            padding-inline: 30px;
+                        }
+                        @include responsive(sm) {
+                            padding-inline: 15px;
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

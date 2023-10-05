@@ -1,0 +1,154 @@
+.section-testimonial {
+    .container {
+        &-testimonial {
+            padding-block: 80px;
+            align-items: center;
+            gap: 30px;
+            position: relative;
+            @include responsive(md) {
+                padding-block: 40px;
+            }
+            .testimonial-image {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                max-width: 674px;
+                @include responsive(xl) {
+                    z-index: -1;
+                    left: -40%;
+                }
+                @include responsive(sm) {
+                    z-index: 0;
+                    left: -35%;
+                    bottom: unset;
+                    top: 25%;
+                }
+            }
+            .head-content {
+                width: 40%;
+                @include responsive(md) {
+                    width: 100%;
+                }
+                .subtext {
+                    display: inline-flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 86px;
+                    &-text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 32px;
+                        &-span {
+                            color: $white;
+                            font-family: $font-display;
+                            font-size: 12px;
+                            font-weight: 400;
+                            line-height: 160%;
+                            text-transform: uppercase;
+                            padding: 6px 12px;
+                            border-radius: 8px;
+                            background: rgba(255, 255, 255, 0.15);
+                        }
+                        &-display {
+                            color: $white;
+                            font-family: $font-display;
+                            font-size: 52px;
+                            font-weight: 600;
+                            line-height: 120%; /* 62.4px */
+                            @include responsive(xl) {
+                                font-size: 42px;
+                            }
+                        }
+                    }
+                    &-image {
+                        img {
+                            max-width: 330px;
+                        }
+                    }
+                }
+            }
+            .body-content {
+                width: 60%;
+                @include responsive(md) {
+                    width: 100%;
+                }
+                .testimonial-slider {
+                    .slide {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 24px;
+                        margin-block: 24px;
+                        &-username {
+                            color: $white;
+                            font-family: $font-display;
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 160%; /* 28.8px */
+                            letter-spacing: 0.09px;
+                        }
+                        &-desc {
+                            color: $white;
+                            font-family: $font-display;
+                            font-size: 26px;
+                            font-weight: 400;
+                            line-height: 140%; /* 36.4px */
+                            letter-spacing: 0.13px;
+                            max-width: 570px;
+                            @include responsive(xl) {
+                                font-size: 24px;
+                            }
+                        }
+                        &-wrap-rating {
+                            display: inline-flex;
+                            gap: 8px;
+                            .rating {
+                                max-width: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .slick-slide {
+                opacity: 0.5;
+            }
+
+            .slick-current {
+                opacity: 1;
+            }
+
+            .slick-dots {
+                position: absolute;
+                top: 50%;
+                bottom: unset;
+                right: 0;
+                width: unset;
+                display: flex;
+                flex-direction: column;
+                transform: translateY(-50%);
+                gap: 24px;
+                li {
+                    // margin-block: 12px;
+                    width: 12px !important;
+                    height: 12px !important;
+                    background-color: rgba($color: $white, $alpha: 0.5);
+                    border-radius: 50%;
+                    button {
+                        width: inherit;
+                        height: inherit;
+                        &::before {
+                            content: unset;
+                        }
+                    }
+
+                    &.slick-active {
+                        transform: scale(1.35);
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

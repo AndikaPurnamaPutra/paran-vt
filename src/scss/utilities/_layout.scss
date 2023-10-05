@@ -1,0 +1,47 @@
+// loop grid
+$grid-columns: 12;
+
+@for $i from 1 through $grid-columns {
+    .grid-#{$i} {
+        width: calc($i / $grid-columns) * 100%;
+    }
+}
+// example to html
+// .grid-6 for 50%
+// .grid-12 for 100%
+[class^="grid-"] {
+    @include responsive(md) {
+        width: 100% !important;
+    }
+}
+
+// .bg-dark {
+//     background-color: $black;
+// }
+
+// layout for display
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 135px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    &-fluid {
+        padding: unset !important;
+    }
+    @include responsive(xl) {
+        padding: 0 60px;
+    }
+    @include responsive(md) {
+        padding: 0 20px;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,137 @@
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    margin: auto;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    transition: all 300ms ease;
+    &.scrolled {
+        background-color: $black;
+    }
+    &.active {
+        background-color: $black;
+    }
+    .container {
+        &-nav {
+            padding-block: 16px;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            @include responsive(md) {
+                flex-direction: row;
+            }
+            .nav {
+                &-left {
+                    gap: 100px;
+                    @include responsive(xl) {
+                        gap: 50px;
+                    }
+                }
+                &-right {
+                    gap: 32px;
+                    @include responsive(xl) {
+                        gap: 16px;
+                    }
+                }
+                &-item {
+                    display: flex;
+                    align-items: center;
+                    &-logo {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 19px;
+                        @include responsive(xl) {
+                            gap: 8px;
+                        }
+                        color: $white;
+                        text-align: center;
+                        font-family: $font-display;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 160%; /* 38.4px */
+                        text-transform: uppercase;
+
+                        img {
+                            max-width: 30px;
+                        }
+                    }
+                    &-menu {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 45px;
+                        @include responsive(md) {
+                            position: absolute;
+                            top: 100%;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 0 auto;
+                            background-color: $black;
+                            text-align: center;
+                            transition: all 500ms ease;
+                            height: 0;
+                            overflow: hidden;
+                            .nav-link {
+                                opacity: 0;
+                            }
+                        }
+                        @include responsive(xl) {
+                            gap: 22.5px;
+                        }
+                        .nav-link {
+                            color: $subText2;
+                            text-align: center;
+                            font-family: $font-display;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 160%; /* 25.6px */
+                            transition: all 300ms ease;
+                            &:hover {
+                                color: $white;
+                            }
+                        }
+                        &.active {
+                            height: 100vh !important;
+                            // padding: 40px;
+                            .nav-link {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                &-btn-responsive {
+                    display: none;
+                    @include responsive(md) {
+                        display: block;
+                            background-image: url("../../../assets/image/menu.svg");
+                            background-repeat: no-repeat;
+                            background-size: 24px 24px;
+                            width: 24px;
+                            height: 24px;
+                            border: transparent;
+                            background-color: transparent;
+                            transition: all 100ms ease;
+                            @include responsive(xl) {
+                                display: block;
+                                z-index: 3;
+                            }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cross {
+    background-image: url("../../../assets/image/cross-white.svg") !important;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+}
