@@ -1,105 +1,116 @@
 .btn {
-    background-color: transparent;
-    border: unset;
-    font-family: $font-display;
-    font-weight: 500;
-    font-size: $p;
-    color: $white;
-    line-height: 160%;
-    padding: 12px 24px;
-    transition: all 300ms ease;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    @include responsive(md) {
-        font-size: 16px;
-    }
-    &-primary {
-        color: $white;
-        border-radius: 8px;
-        background-color: $primary;
-    }
-    &-secondary {
-        font-size: 12px;
-        color: $white;
-        border-radius: 4px;
-        background-color: $primary;
-        padding: 8px 12px;
-    }
-    &-outline {
-        border: 1px solid #a6a6a6;
-        background-color: #0b0b16;
-        border-radius: 8px;
-        img {
-            max-width: 151px;
-            @include responsive(md) {
-                max-width: 135px;
-            }
-        }
+	background-color: transparent;
+	border: unset;
+	font-family: $font-display;
+	font-weight: 500;
+	font-size: $p;
+	color: $white;
+	line-height: 160%;
+	padding: 12px 24px;
+	transition: all 300ms ease;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	@include responsive(md) {
+		font-size: 16px;
+	}
+	&-primary {
+		color: $white;
+		border-radius: 8px;
+		background-color: $primary;
+        border: 1px solid $primary;
         &:hover {
-            background-color: $primary;
-            border: 1px solid $primary;
+            background-color: transparent;
+            border: 1px solid #a6a6a6;
         }
-    }
-    &-disable {
-        font-weight: 400;
-        border-radius: 12px;
-        background-color: $gray;
-    }
-    &-slider {
-        background-color: #ffffff;
-        border-radius: 20px;
-        display: inline-flex;
-        gap: 16px;
-        padding: 8px;
-        a {
-            padding: 5px 10px;
-            color: $black;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 160%; /* 22.4px */
-            transition: all 300ms ease;
-            &.active {
-                background-color: $primary;
-                color: $white;
-            }
-        }
-    }
-    &-link {
-        color: $subText2;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 160%; /* 25.6px */
-        &-mobile {
-            display: none;
-            @include responsive(md) {
-                display: block;
-            }
-        }
-        &-desktop {
-            @include responsive(md) {
-                display: none;
-            }
-        }
-    }
-    &-signUp {
-        font-size: 16px;
-        padding: 16px 36px;
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        background: linear-gradient(161deg, #383838 -3.59%, #151515 49.14%, rgba(56, 56, 56, 0.4) 110.94%);
-        &-mobile {
-            display: none;
-            @include responsive(md) {
-                display: block;
-            }
-        }
-        &-desktop {
-            @include responsive(md) {
-                display: none;
-            }
-        }
-    }
+	}
+	&-secondary {
+		font-size: 12px;
+		color: $white;
+		border-radius: 4px;
+		background-color: $primary;
+		padding: 8px 12px;
+	}
+	&-outline {
+		border: 1px solid $primary;
+		background-color: $primary;
+		border: 1px solid $primary;
+		border-radius: 8px;
+		img {
+			max-width: 151px;
+			@include responsive(md) {
+				max-width: 135px;
+			}
+		}
+		&:hover {
+			background-color: #0b0b16;
+			border: 1px solid #a6a6a6;
+		}
+	}
+	&-disable {
+		font-weight: 400;
+		border-radius: 12px;
+		background-color: $gray;
+	}
+	&-slider {
+		background-color: #ffffff;
+		border-radius: 20px;
+		display: inline-flex;
+		gap: 16px;
+		padding: 8px;
+		a {
+			padding: 5px 10px;
+			color: $black;
+			border-radius: 12px;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 160%; /* 22.4px */
+			transition: all 300ms ease;
+			&.active {
+				background-color: $primary;
+				color: $white;
+			}
+		}
+	}
+	&-link {
+		color: $subText2;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 160%; /* 25.6px */
+		&-mobile {
+			display: none;
+			@include responsive(md) {
+				display: block;
+			}
+		}
+		&-desktop {
+			@include responsive(md) {
+				display: none;
+			}
+		}
+	}
+	&-signUp {
+		font-size: 16px;
+		padding: 16px 36px;
+		border-radius: 20px;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		background: linear-gradient(
+			161deg,
+			#383838 -3.59%,
+			#151515 49.14%,
+			rgba(56, 56, 56, 0.4) 110.94%
+		);
+		&-mobile {
+			display: none;
+			@include responsive(md) {
+				display: block;
+			}
+		}
+		&-desktop {
+			@include responsive(md) {
+				display: none;
+			}
+		}
+	}
 }
